@@ -1,0 +1,17 @@
+---
+description: Use the Word-to-Markdown visual workflow for spec conversion files
+globs: specs/**/*
+alwaysApply: false
+---
+
+# Word To Markdown Specs
+
+When working on the `specs/` Word-to-Markdown conversion files, use the personal skill `word-to-markdown-visual`.
+
+Follow these constraints:
+- Treat MS Word visual layout as the source of truth.
+- Treat Cursor Preview as the target renderer.
+- Do not declare the output fixed just because DOCX metadata or structural validation passes.
+- Validate section by section, then inspect the generated Markdown/HTML only after a visual mismatch is identified.
+- Prefer stable HTML over pure Markdown when Cursor Preview misrenders numbering, indentation, tables, or boxed blocks.
+- For numbered descendants such as `3.1`, `4.5.1`, or `1.1.1`, avoid containers that Preview can render with stray bullets.

@@ -1,0 +1,29 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Generated conversion artifacts
+specs/build/
+specs/*.clean.md
+specs/*.ast.json
+
+# Generated logs/exports
+*.log
+*.xlsx
+
+# Credentials and private keys
+*.pem
+*.cred
