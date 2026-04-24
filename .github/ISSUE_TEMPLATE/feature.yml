@@ -1,0 +1,69 @@
+name: Feature
+description: New approved requirement or enhancement derived from an approved spec section.
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when the Word specification (or its generated Markdown snapshot) approves a new requirement or an enhancement to an existing one. Link directly to the relevant spec section in the current clean Markdown snapshot.
+  - type: input
+    id: spec-version
+    attributes:
+      label: Spec Version
+      description: The approved Word spec version this work targets (for example `1.02` or `1.03`).
+      placeholder: "1.02"
+    validations:
+      required: true
+  - type: input
+    id: spec-section
+    attributes:
+      label: Spec Section
+      description: Section number and title from the spec, plus an anchor link into the clean Markdown snapshot when available.
+      placeholder: "3.5 Display Summary (specs/SpecsUploadingLISDatav1.02.clean.md#35-display-summary)"
+    validations:
+      required: true
+  - type: input
+    id: app-target-version
+    attributes:
+      label: App Target Version
+      description: Target app semver milestone (for example `1.13.1` or `1.14.0`).
+      placeholder: "1.13.1"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Clear, testable criteria that define when this feature is done.
+      placeholder: |
+        - Given ..., When ..., Then ...
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - blocker
+        - P1 - high
+        - P2 - medium
+        - P3 - low
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: GitHub handle of the person accountable for this work.
+      placeholder: "@nelsonym"
+    validations:
+      required: true
+  - type: input
+    id: test-evidence-url
+    attributes:
+      label: Test Evidence URL
+      description: Link to automated or manual test evidence. Leave as `TBD` until evidence exists.
+      placeholder: "TBD"
+    validations:
+      required: true

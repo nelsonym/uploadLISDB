@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature
+    url: https://github.com/nelsonym/uploadLISDB/issues/new?template=feature.yml
+    about: New approved requirement or enhancement.
+  - name: Bug
+    url: https://github.com/nelsonym/uploadLISDB/issues/new?template=bug.yml
+    about: Implementation defect or deviation from spec.
+  - name: Spec Clarification
+    url: https://github.com/nelsonym/uploadLISDB/issues/new?template=spec-clarification.yml
+    about: Ambiguity requiring an author decision.

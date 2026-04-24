@@ -1,0 +1,47 @@
+name: Spec Clarification
+description: Ambiguity in the approved spec that requires an author decision before implementation.
+title: "[Clarification] "
+labels: ["clarification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a spec section can be interpreted in more than one way, and implementation cannot proceed safely until the author confirms the intended behavior.
+  - type: input
+    id: spec-version
+    attributes:
+      label: Spec Version
+      description: Spec version containing the ambiguity.
+      placeholder: "1.02"
+    validations:
+      required: true
+  - type: input
+    id: spec-section
+    attributes:
+      label: Spec Section
+      description: Section number and title, with anchor link into the clean Markdown snapshot when available.
+      placeholder: "3.3 Log File Requirements"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: State the ambiguity precisely.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-resolution
+    attributes:
+      label: Proposed Resolution
+      description: Cursor or the reporter proposes one or more candidate interpretations and the implication for each.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision
+      description: Recorded author decision. Leave blank until level-off completes; then document the decision and whether it triggers a spec-version bump.
+      placeholder: "TBD"
+    validations:
+      required: false

@@ -1,0 +1,65 @@
+name: Bug
+description: Implementation defect or deviation from an approved spec section.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when the running application behaves differently from the approved spec or produces an unexpected error. Findings originating from the legacy or fresh audit should additionally carry the `audit-finding` label.
+  - type: input
+    id: spec-version
+    attributes:
+      label: Spec Version
+      description: The approved spec version the bug is reported against.
+      placeholder: "1.02"
+    validations:
+      required: true
+  - type: input
+    id: spec-section
+    attributes:
+      label: Spec Section
+      description: Section number and title, with anchor link into the clean Markdown snapshot when available.
+      placeholder: "3.5 Display Summary (specs/SpecsUploadingLISDatav1.02.clean.md#35-display-summary)"
+    validations:
+      required: true
+  - type: input
+    id: app-version-observed
+    attributes:
+      label: App Version Observed
+      description: Running app version where the defect was observed.
+      placeholder: "1.13.0"
+    validations:
+      required: true
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Repro Steps
+      description: Minimal steps to reproduce with expected vs actual behavior.
+      placeholder: |
+        1. Run `python convertnavbak.py ...`
+        2. Observe ...
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Classification
+      description: Level-off decision. Default to `unclassified` until the author and Cursor agree.
+      options:
+        - unclassified
+        - specification issue
+        - implementation defect
+        - ambiguity requiring clarification
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Log excerpts, screenshots, file paths, or URLs supporting the report. Scrub credentials before posting.
+      placeholder: "Attach sanitized logs or link to tests/evidence/..."
+    validations:
+      required: true
